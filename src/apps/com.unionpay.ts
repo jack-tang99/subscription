@@ -5,20 +5,6 @@ export default defineAppConfig({
   name: '云闪付',
   groups: [
     {
-      key: 0,
-      name: '开屏广告',
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      quickFind: true,
-      rules: [
-        {
-          matches: '[id="com.unionpay:id/jump"][text^="跳过"]',
-          snapshotUrls: 'https://i.gkd.li/import/12705391',
-        },
-      ],
-    },
-    {
       key: 1,
       name: '更新弹窗',
       matchTime: 10000,
@@ -55,7 +41,7 @@ export default defineAppConfig({
     {
       key: 9,
       name: '右侧悬浮广告',
-      matchTime: 10000,
+      // matchTime: 10000, 部分广告不在10s内
       actionMaximum: 1,
       resetMatch: 'app',
       quickFind: true,
@@ -115,12 +101,36 @@ export default defineAppConfig({
       desc: '点击左上角返回',
       actionMaximum: 1,
       resetMatch: 'app',
-      quickFind: true,
       rules: [
         {
           activityIds: 'com.unionpay.cordova.UPActivityCordovaWeb',
-          matches: '[id="com.unionpay:id/iv_title_left_image"][desc="返回"]', //实测原规则点击中间下方【x】无效
+          matches:
+            'WebView[text="天天签到"] TextView[text="炫耀一下"] + TextView[clickable=true]',
           snapshotUrls: 'https://i.gkd.li/import/13440341',
+        },
+      ],
+    },
+    {
+      key: 14,
+      name: '我的页面-广告弹窗',
+      matchTime: 10000,
+      actionMaximum: 1,
+      activityIds: 'com.unionpay.activity.UPActivityMain',
+      rules:
+        '[id="com.unionpay:id/container"] + [id="com.unionpay:id/image"][clickable=true]',
+      snapshotUrls: 'https://i.gkd.li/import/13440341',
+    },
+    {
+      key: 15,
+      quickFind: true,
+      name: '全屏广告-领取优惠弹窗',
+      desc: '点击X',
+      rules: [
+        {
+          activityIds: 'com.unionpay.cordova.UPActivityCordovaWeb',
+          matches:
+            '[id="com.unionpay:id/view_content_container"] View[text="关闭按钮"][clickable=true]',
+          snapshotUrls: 'https://i.gkd.li/import/13848688',
         },
       ],
     },

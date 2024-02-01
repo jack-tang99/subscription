@@ -1,11 +1,12 @@
 # CSDN
 
-存在 5 规则组 - [net.csdn.csdnplus](/src/apps/net.csdn.csdnplus.ts)
+存在 6 规则组 - [net.csdn.csdnplus](/src/apps/net.csdn.csdnplus.ts)
 
 ## 开屏广告
 
 - [快照-0](https://i.gkd.li/import/12673680)
-- [快照-1](https://i.gkd.li/import/13224627)
+- [快照-1](https://i.gkd.li/import/13826577)
+- [快照-2](https://i.gkd.li/import/13224627)
 
 ## 更新弹窗
 
@@ -34,3 +35,10 @@
 默认禁用
 
 - [快照-0](https://i.gkd.li/import/12673638)
+
+## 分段广告-底部广告
+
+默认禁用 - 点击X-点击不感兴趣
+
+- [快照-0](https://i.gkd.li/import/13830821)
+- [快照-1](https://i.gkd.li/import/13830858)

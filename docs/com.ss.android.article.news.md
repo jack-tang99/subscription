@@ -2,14 +2,6 @@
 
 存在 8 规则组 - [com.ss.android.article.news](/src/apps/com.ss.android.article.news.ts)
 
-## 开屏广告
-
-- [快照-0](https://i.gkd.li/import/12684954)
-- [快照-1](https://i.gkd.li/import/12754759)
-- [快照-2](https://i.gkd.li/import/12840189)
-- [快照-3](https://i.gkd.li/import/13174224)
-- [快照-4](https://i.gkd.li/import/13402688)
-
 ## 更新弹窗
 
 默认禁用
@@ -22,8 +14,8 @@
 
 默认禁用
 
-- [快照-0](https://i.gkd.li/import/13262675)
-- [快照-1](https://i.gkd.li/import/13274622)
+- [快照-0](https://i.gkd.li/import/13762123)
+- [快照-1](https://i.gkd.li/import/13761236)
 
 ## 请求通知权限弹窗
 
@@ -56,8 +48,9 @@
 - [快照-2](https://i.gkd.li/import/12836272)
 - [快照-3](https://i.gkd.li/import/12840162)
 - [快照-4](https://i.gkd.li/import/13093576)
-- [快照-5](https://i.gkd.li/import/12733152)
-- [快照-6](https://i.gkd.li/import/12755265)
+- [快照-5](https://i.gkd.li/import/12733098)
+- [快照-6](https://i.gkd.li/import/12733152)
+- [快照-7](https://i.gkd.li/import/12755265)
 
 ## 底部话题推荐弹窗
 
@@ -71,3 +64,9 @@
 
 - [快照-0](https://i.gkd.li/import/13402468)
 - [快照-1](https://i.gkd.li/import/13402480)
+
+## 局部广告-底部热榜弹窗
+
+默认禁用 - 点击X
+
+- [快照-0](https://i.gkd.li/import/13828331)

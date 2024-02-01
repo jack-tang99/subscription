@@ -5,14 +5,16 @@ export default defineAppConfig({
   name: '荣耀亲选',
   groups: [
     {
-      key: 0,
-      name: '开屏广告',
+      key: 1,
       quickFind: true,
-      actionMaximum: 1,
-      matchTime: 10000,
-      resetMatch: 'app',
-      rules: '[text*="跳过"][id="cn.honor.qinxuan:id/tv_time"]',
-      snapshotUrls: 'https://i.gkd.li/import/13541270',
+      name: '全屏广告-首页广告弹窗',
+      desc: '点击X',
+      rules: [
+        {
+          matches: '[id="cn.honor.qinxuan:id/iv_close_dlg"]',
+          snapshotUrls: 'https://i.gkd.li/import/13930613',
+        },
+      ],
     },
   ],
 });

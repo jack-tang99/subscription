@@ -10,6 +10,8 @@ export default defineAppConfig({
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
+      actionCdKey: 0,
+      actionMaximumKey: 0,
       rules: [
         {
           key: 0,
@@ -27,14 +29,20 @@ export default defineAppConfig({
         },
         {
           key: 1,
-          matches: '[id="com.byted.pangle:id/tt_splash_skip_btn"]',
+          matches: '[id$="tt_splash_skip_btn"]',
           snapshotUrls: 'https://i.gkd.li/import/12999739',
+        },
+        {
+          key: 2,
+          matches:
+            'FrameLayout > FrameLayout[childCount>2] > @View[clickable=true] + TextView',
+          snapshotUrls: 'https://i.gkd.li/import/14046124',
         },
       ],
     },
     {
       key: 1,
-      name: '更新弹窗',
+      name: '更新提示',
       activityIds: [
         'com.netease.mobimail.module.flutter.CustomFlutterActivity',
       ],
@@ -44,7 +52,7 @@ export default defineAppConfig({
     },
     {
       key: 2,
-      name: '邮件列表广告',
+      name: '全屏广告-邮件列表广告',
       activityIds: ['com.netease.mail.biz.main.MainITabActivity'],
       quickFind: true,
       rules: [
@@ -61,6 +69,16 @@ export default defineAppConfig({
         },
       ],
       snapshotUrls: 'https://i.gkd.li/import/12664070',
+    },
+    {
+      key: 5,
+      name: '全屏广告-查看成就',
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules:
+        'TextView[text="恭喜您获得以下成就"] - TextView[text=""][clickable=true]',
+      snapshotUrls: 'https://i.gkd.li/import/13876817',
     },
   ],
 });

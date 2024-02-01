@@ -10,17 +10,24 @@ export default defineAppConfig({
       actionMaximum: 1,
       resetMatch: 'app',
       matchTime: 10000,
+      quickFind: true,
       rules: [
         {
           name: '字节SDK',
-          matches: '[id="com.byted.pangle:id/tt_splash_skip_btn"]',
+          matches:
+            '@[id="com.byted.pangle:id/tt_splash_skip_btn"] <<n [id="cn.lezhi.speedtest:id/fl_splash_container"]',
           snapshotUrls: 'https://i.gkd.li/import/13544242',
         },
         {
           name: '腾讯SDK',
-          quickFind: true,
           matches: '[text*="跳过"][text.length<=10]',
           snapshotUrls: 'https://i.gkd.li/import/13626049',
+        },
+        {
+          name: '腾讯SDK',
+          matches:
+            '@View <3 FrameLayout[childCount=4] <2 FrameLayout[childCount=2] < [vid="fl_splash_container"]',
+          snapshotUrls: 'https://i.gkd.li/import/13885906',
         },
       ],
     },

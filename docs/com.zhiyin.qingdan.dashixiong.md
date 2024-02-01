@@ -2,12 +2,7 @@
 
 存在 3 规则组 - [com.zhiyin.qingdan.dashixiong](/src/apps/com.zhiyin.qingdan.dashixiong.ts)
 
-## 开屏广告
-
-- [快照-0](https://i.gkd.li/import/12843284)
-- [快照-1](https://i.gkd.li/import/12843283)
-
-## 弹窗广告
+## 全屏广告
 
 默认禁用
 
@@ -25,3 +20,9 @@
 默认禁用 - 自动点击【我知道了】
 
 - [快照-0](https://i.gkd.li/import/12843280)
+
+## 全屏广告-首页广告弹窗
+
+默认禁用 - 点击X
+
+- [快照-0](https://i.gkd.li/import/13887500)

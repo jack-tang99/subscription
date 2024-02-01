@@ -43,9 +43,30 @@ export default defineAppConfig({
     {
       key: 1,
       name: '申请消息提醒弹窗',
-      activityIds: 'com.baidu.tieba.pb.pb.main.PbActivity',
-      rules: '@ImageView[clickable=true] -2 LinearLayout > [text^="打开通知"]',
-      snapshotUrls: 'https://i.gkd.li/import/13536170',
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: [
+        {
+          key: 0,
+          activityIds: 'com.baidu.tieba.pb.pb.main.PbActivity',
+          matches:
+            '@ImageView[clickable=true] -2 LinearLayout > [text^="打开通知"]',
+          snapshotUrls: 'https://i.gkd.li/import/13536170',
+        },
+        {
+          key: 1,
+          activityIds:
+            'com.baidu.tieba.immessagecenter.mention.reply.ReplyMeActivity',
+          matches: 'TextView[text="开启消息推送"] +2 TextView[text="不开启"]',
+          snapshotUrls: 'https://i.gkd.li/import/13675694',
+        },
+        {
+          key: 2,
+          activityIds: 'com.baidu.tbadk.browser.TBWebContainerActivity',
+          matches: '[text="开启通知"] - [text="暂不开启"]',
+          snapshotUrls: 'https://i.gkd.li/import/13804455',
+        },
+      ],
     },
     {
       enable: false,
@@ -141,7 +162,7 @@ export default defineAppConfig({
     {
       key: 9,
       name: '广告弹窗',
-      matchLauncher: true,
+
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'activity',
@@ -228,6 +249,30 @@ export default defineAppConfig({
       snapshotUrls: [
         'https://i.gkd.li/import/13322337',
         'https://i.gkd.li/import/13328738',
+      ],
+    },
+    {
+      enable: false,
+      key: 12,
+      name: '功能类-贴吧内签到并关闭弹窗',
+      resetMatch: 'activity',
+      rules: [
+        {
+          key: 0,
+          name: '贴吧页签到',
+          activityIds: ['com.baidu.tieba.forum.ForumActivity'],
+          matches:
+            'WebView[text="frs"] > View > View > View > View > TextView[text="签到"][clickable=true]',
+          snapshotUrls: ['https://i.gkd.li/import/13776801'],
+        },
+        {
+          key: 1,
+          name: '签到成功-弹窗',
+          activityIds: ['com.baidu.tbadk.browser.TBWebContainerActivity'],
+          matches:
+            'WebView[text="签到弹窗"] > View > View > TextView[text=""][clickable=true]',
+          snapshotUrls: ['https://i.gkd.li/import/13776424'],
+        },
       ],
     },
   ],

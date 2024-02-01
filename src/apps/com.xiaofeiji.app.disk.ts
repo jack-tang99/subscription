@@ -5,18 +5,23 @@ export default defineAppConfig({
   name: '小飞机网盘',
   groups: [
     {
-      name: '开屏广告',
-      key: 0,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      matchTime: 10000,
+      key: 1,
+      quickFind: true,
+      name: '分段广告',
+      desc: '点击X-点击不感兴趣',
       rules: [
         {
-          matches: ['[desc$="跳过"]'],
-          snapshotUrls: ['https://i.gkd.li/import/13554076'],
-          exampleUrls: [
-            'https://m.gkd.li/58279234/edf4bbb4-889e-48cb-b54b-f4bc0a2929fb',
-          ],
+          key: 0,
+          activityIds: 'com.xiaofeiji.app.disk.MainActivity',
+          matches: '@Image[visibleToUser=true] < View + View >2 [text="广告"]',
+          snapshotUrls: 'https://i.gkd.li/import/13857392',
+        },
+        {
+          preKeys: 0,
+          key: 1,
+          activityIds: 'com.xiaofeiji.app.disk.MainActivity',
+          matches: '[id="android:id/content"] >5 [text="不感兴趣"]',
+          snapshotUrls: 'https://i.gkd.li/import/13857537',
         },
       ],
     },

@@ -5,17 +5,6 @@ export default defineAppConfig({
   name: '小米有品',
   groups: [
     {
-      key: 0,
-      name: '开屏广告',
-      activityIds: ['com.xiaomi.youpin.activity.YouPinMainTabActivity'],
-      rules: [
-        {
-          matches: '[id="com.xiaomi.youpin:id/yp_splash_jump_image"]',
-          snapshotUrls: ['https://i.gkd.li/import/12836717'],
-        },
-      ],
-    },
-    {
       key: 1,
       name: '广告弹窗',
       activityIds: [
@@ -31,13 +20,13 @@ export default defineAppConfig({
     },
     {
       key: 2,
-      name: '版本升级弹窗',
+      name: '更新提示-版本升级弹窗',
       activityIds: [
         'com.xiaomi.youpin.globalpopwindow.popwindow.PopWindowActivity',
       ],
       rules: [
         {
-          matches: '[id="com.xiaomi.youpin:id/ypd_alert_close_area"]',
+          matches: '[id="com.xiaomi.youpin:id/ypd_alert_close_image"]',
           snapshotUrls: ['https://i.gkd.li/import/12836775'],
         },
       ],

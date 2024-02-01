@@ -7,25 +7,32 @@ export default defineAppConfig({
     {
       key: 0,
       name: '开屏广告',
-      activityIds: 'com.firebear.androil.app.splash.SplashActivity',
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      actionCdKey: 0,
+      actionMaximumKey: 0,
+      quickFind: true,
       rules: [
         {
-          matches:
-            '[id="com.firebear.androil:id/adContainerLay"] [text="跳过"]',
+          key: 0,
+          matches: '[text*="跳过"][text.length<=10]',
           snapshotUrls: 'https://i.gkd.li/import/12712742',
         },
         {
-          matches: '[id="com.byted.pangle.m:id/tt_splash_skip_btn"]',
+          matches:
+            '@View <2 * <2 * < [id="com.firebear.androil:id/adContainerLay"]',
           snapshotUrls: [
             'https://i.gkd.li/import/13088169',
             'https://i.gkd.li/import/12855707',
+            'https://i.gkd.li/import/13927561',
           ],
         },
       ],
     },
     {
       key: 1,
-      name: '广告弹窗',
+      name: '全屏广告',
       desc: '来自第三方SDK【穿山甲】',
       activityIds:
         'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
@@ -55,7 +62,7 @@ export default defineAppConfig({
     },
     {
       key: 2,
-      name: '升级弹窗',
+      name: '更新提示',
       activityIds: 'com.firebear.androil.app.home.MainActivity',
       rules:
         '@[id="com.firebear.androil:id/dismissNtfImgView"] < RelativeLayout - [id="com.firebear.androil:id/contentLay"] >3 TextView[text^="升级"]',

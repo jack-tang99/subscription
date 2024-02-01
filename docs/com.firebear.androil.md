@@ -7,8 +7,9 @@
 - [快照-0](https://i.gkd.li/import/12712742)
 - [快照-1](https://i.gkd.li/import/13088169)
 - [快照-2](https://i.gkd.li/import/12855707)
+- [快照-3](https://i.gkd.li/import/13927561)
 
-## 广告弹窗
+## 全屏广告
 
 默认禁用 - 来自第三方SDK【穿山甲】
 
@@ -17,7 +18,7 @@
 - [快照-2](https://i.gkd.li/import/12864214)
 - [快照-3](https://i.gkd.li/import/13175439)
 
-## 升级弹窗
+## 更新提示
 
 默认禁用
 

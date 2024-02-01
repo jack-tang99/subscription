@@ -2,8 +2,8 @@
 
 存在 1 规则组 - [com.ataaw.tianyi](/src/apps/com.ataaw.tianyi.ts)
 
-## 版本升级
+## 更新提示
 
 默认禁用
 
-- [快照-0](https://i.gkd.li/import/13327303)
+- [快照-0](https://i.gkd.li/import/13867468)

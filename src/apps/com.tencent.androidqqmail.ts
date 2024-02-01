@@ -7,8 +7,11 @@ export default defineAppConfig({
     {
       key: -1,
       name: '开屏广告',
-      activityIds: 'com.tencent.qqmail.launcher.desktop.LauncherActivity',
-      rules: 'RelativeLayout > ImageView[id!=null] + ImageView[id!=null]',
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules:
+        'RelativeLayout[childCount=3] > ImageView + @ImageView[clickable=true][visibleToUser=true] + FrameLayout[childCount>0]',
       snapshotUrls: 'https://i.gkd.li/import/12775855',
     },
     {

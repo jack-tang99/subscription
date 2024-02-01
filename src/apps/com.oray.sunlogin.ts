@@ -5,22 +5,8 @@ export default defineAppConfig({
   name: '向日葵远程控制',
   groups: [
     {
-      key: -1,
-      name: '开屏广告',
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      quickFind: true,
-      rules: [
-        {
-          matches: '[id="com.oray.sunlogin:id/ll_skip_ad"]',
-          snapshotUrls: 'https://i.gkd.li/import/13197052',
-        },
-      ],
-    },
-    {
       key: 0,
-      name: '瓜子会员弹窗',
+      name: '全屏广告-瓜子会员弹窗',
       desc: '点击右上角[关闭]',
       quickFind: true,
       activityIds: 'com.oray.sunlogin.application.Main',
@@ -36,7 +22,7 @@ export default defineAppConfig({
     {
       matchTime: 30000,
       key: 1,
-      name: '版本更新',
+      name: '更新提示-版本更新',
       quickFind: true,
       rules: [
         {
@@ -48,13 +34,20 @@ export default defineAppConfig({
     },
     {
       key: 2,
-      name: '设备列表-卡片广告',
+      name: '功能类-设备列表-卡片广告',
       activityIds: 'com.oray.sunlogin.application.Main',
       quickFind: true,
       rules: '[id="com.oray.sunlogin:id/fl_close_advertise"]',
       snapshotUrls: 'https://i.gkd.li/import/13207785',
       exampleUrls:
         'https://github.com/gkd-kit/inspect/assets/38517192/071e5512-e1aa-4a8c-8440-009d6f0f35ff',
+    },
+    {
+      key: 3,
+      name: '功能类-退出app提示',
+      quickFind: true,
+      rules: '[text="是否确认退出向日葵？"] + LinearLayout > [vid="button_ok"]',
+      snapshotUrls: 'https://i.gkd.li/import/13927148',
     },
   ],
 });

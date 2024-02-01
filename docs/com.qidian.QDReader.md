@@ -2,10 +2,6 @@
 
 存在 9 规则组 - [com.qidian.QDReader](/src/apps/com.qidian.QDReader.ts)
 
-## 开屏广告
-
-- [快照-0](https://i.gkd.li/import/12508836)
-
 ## 更新弹窗
 
 默认禁用
@@ -60,3 +56,9 @@
 默认禁用 - 福利中心看视频后获得奖励，自动点击“我知道了”
 
 - [快照-0](https://i.gkd.li/import/13606901)
+
+## 全屏广告-红包弹窗
+
+默认禁用 - 点击X
+
+- [快照-0](https://i.gkd.li/import/13918466)

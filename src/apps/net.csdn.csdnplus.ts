@@ -17,8 +17,14 @@ export default defineAppConfig({
           snapshotUrls: ['https://i.gkd.li/import/12673680'],
         },
         {
+          quickFind: true,
+          matches:
+            '@View <3 FrameLayout <2 FrameLayout < FrameLayout < [vid="fl_third_ad"]',
+          snapshotUrls: 'https://i.gkd.li/import/13826577',
+        },
+        {
           // 无法使用 quickFind
-          matches: '[id="com.byted.pangle.m:id/tt_splash_skip_btn"]',
+          matches: '[id$="tt_splash_skip_btn"]',
           snapshotUrls: 'https://i.gkd.li/import/13224627',
         },
       ],
@@ -97,6 +103,28 @@ export default defineAppConfig({
         ],
         snapshotUrls: ['https://i.gkd.li/import/12673638'],
       },
+    },
+    {
+      key: 11,
+      quickFind: true,
+      name: '分段广告-底部广告',
+      desc: '点击X-点击不感兴趣',
+      rules: [
+        {
+          key: 0,
+          activityIds: 'net.csdn.csdnplus.mvvm.ui.activity.BlogDetailActivity',
+          matches:
+            '@ImageView[clickable=true] <<2 ViewGroup <<2 ViewGroup - FrameLayout <<6 FrameLayout[id="net.csdn.csdnplus:id/fl_template_container"][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/import/13830821',
+        },
+        {
+          preKeys: 0,
+          key: 1,
+          activityIds: 'net.csdn.csdnplus.mvvm.ui.activity.BlogDetailActivity',
+          matches: 'FrameLayout[id="android:id/content"] [text="不感兴趣"]',
+          snapshotUrls: 'https://i.gkd.li/import/13830858',
+        },
+      ],
     },
   ],
 });

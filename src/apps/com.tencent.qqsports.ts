@@ -11,8 +11,13 @@ export default defineAppConfig({
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
-      rules: '[text*="跳过"][text.length<=10]',
-      snapshotUrls: 'https://i.gkd.li/import/12845494',
+      rules: [
+        {
+          action: 'clickCenter',
+          matches: 'TextView[text*="跳过"][text.length<=10]',
+          snapshotUrls: 'https://i.gkd.li/import/14032883',
+        },
+      ],
     },
   ],
 });
